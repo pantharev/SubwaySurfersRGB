@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0a0a0f;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Neon text glow utilities */
+.text-glow-pink {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.4);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4);
+}
+
+/* Gradient border button */
+.btn-neon {
+  position: relative;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a25 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.btn-neon::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #ff00ff, #00ffff, #00ff00, #ff00ff);
+  border-radius: inherit;
+  z-index: -1;
+  animation: rgb-border 3s linear infinite;
+}
+
+@keyframes rgb-border {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Touch action for mobile */
+canvas {
+  touch-action: none;
+}
