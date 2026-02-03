@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Subway Runners 🏃‍♂️
 
 A Subway Surfers-style 3D endless runner built with React, Three.js, and Supabase.
@@ -195,6 +194,7 @@ npm run preview  # Preview production build
 ## License
 
 MIT
+
 =======
 # 🏃‍♂️ Endless Runner 3D (Subway Surfers–Style)
 
